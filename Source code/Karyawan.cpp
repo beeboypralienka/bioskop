@@ -1,22 +1,19 @@
 #include <iostream>
-#include "Person.cpp"
 using namespace std;
  
-class Karyawan : public Person
+class Karyawan
 {
         private:
-            string jabatan;
+            string namaKaryawan;
             
         public:
             void addKaryawan()
-            {
-                Person::addPerson();
-                cout << "Input Jabatan Karyawan : ";
-                getline(cin, jabatan);                                
+            {                
+                cout << "Input Nama Karyawan : ";
+                getline(cin, namaKaryawan);                                
             }
             void showKaryawan()
-            {
-            	Person::showPerson();
-                cout << "Jabatan Karyawan : "<< jabatan<<endl;                                
+            {            	
+                cout << "Kasir : "<< namaKaryawan<<endl;                                
             }
 };

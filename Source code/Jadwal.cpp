@@ -4,7 +4,8 @@ using namespace std;
 class Jadwal
 {
         private:
-            string tglMain, jamMain, hargaTiket;
+            string tglMain, jamMain;
+			double hargaTiket;
             
         public:
             void addJadwal()
@@ -13,8 +14,8 @@ class Jadwal
                 getline(cin, tglMain);        
 				cout<<"Input Jam Main : ";
                 getline(cin, jamMain);   
-				cout<<"Input Harga Tiket : ";
-                getline(cin, hargaTiket);                     
+				cout<<"Input Harga Tiket : ";                
+                cin>>hargaTiket;
             }
             void showJadwal()
             {
@@ -22,4 +23,8 @@ class Jadwal
             	cout<<"Jam Main : " << jamMain <<endl;
             	cout<<"Harga Tiket : " << hargaTiket <<endl;
             }
+            double getHarga()
+			{
+            	return hargaTiket;	
+			}
 };
