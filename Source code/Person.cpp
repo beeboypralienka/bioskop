@@ -9,15 +9,15 @@ class Person
         public:
             void addPerson()
             {
-                cout << endl << "Input Nama   : ";
+                cout << "Input Nama    : ";
                 getline(cin, nama);                
-                cout <<         "Input Alamat : ";
+                cout << "Input Alamat  : ";
                 getline(cin, alamat);
             }
             void showPerson()
             {
-            cout << endl <<     "Nama   : " << nama;
-            cout << endl <<     "Alamat : " << alamat;
+            cout <<     "Nama    : " << nama <<endl;
+            cout <<     "Alamat  : " << alamat <<endl;
             }
 };
 
