@@ -11,12 +11,12 @@ class Karyawan : public Person
             void addKaryawan()
             {
                 Person::addPerson();
-                cout << "Input Jabatan : ";
+                cout << "Input Jabatan Karyawan : ";
                 getline(cin, jabatan);                                
             }
             void showKaryawan()
             {
             	Person::showPerson();
-                cout << "Jabatan : "<< jabatan<<endl;                                
+                cout << "Jabatan Karyawan : "<< jabatan<<endl;                                
             }
 };
