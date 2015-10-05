@@ -4,25 +4,37 @@ using namespace std;
 class Jadwal
 {
         private:
-            string tglMain, jamMain;
+            string tglMain, jamMain, kodeJadwal;
 			double hargaTiket;
             
         public:
             void addJadwal()
-            {
-                cout<<"Input Tanggal Main : ";
-                getline(cin, tglMain);        
-				cout<<"Input Jam Main : ";
-                getline(cin, jamMain);   
-				cout<<"Input Harga Tiket : ";                
-                cin>>hargaTiket;
+            {            	
+            	cout<<"Input Kode Jadwal [1A/1B] : ";
+            	cin>>kodeJadwal;   								
             }
+            
+            string getKodeJadwal(){
+            	return kodeJadwal;
+			}
+			
             void showJadwal()
-            {
-            	cout<<"Tanggal Main : " << tglMain <<endl;            
-            	cout<<"Jam Main : " << jamMain <<endl;
-            	cout<<"Harga Tiket : " << hargaTiket <<endl;
+            {            
+				if(kodeJadwal=="1A"){
+					tglMain = "12/10/2015";
+					jamMain = "13.00 WIB";
+					hargaTiket = 25000;
+				}else{
+					tglMain = "13/10/2015";
+					jamMain = "20.00 WIB";
+					hargaTiket = 30000;
+				} 	
+								 
+            	cout<<"Tanggal Putar       : " << tglMain <<endl;            
+            	cout<<"Jam Tayang          : " << jamMain <<endl;
+            	cout<<"Harga Tiket         : " << hargaTiket <<endl;
             }
+            
             double getHarga()
 			{
             	return hargaTiket;	

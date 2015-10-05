@@ -1,8 +1,6 @@
 #include <iostream>
 #include "Jadwal.cpp"
-#include "Film.cpp"
-#include "Studio.cpp"
-#include "Karyawan.cpp"
+
 using namespace std;
  
 class Transaksi : public Jadwal
@@ -11,33 +9,25 @@ class Transaksi : public Jadwal
             string kdTransaksi;
             double jmlPesanKursi, totalHarga;
             
-        public:
-        	Karyawan kasir;        
-			Film film;
-			Studio studio;
-	
+        public:        	
             void generateKode()
-            {
-                cout<<"Kode Transaksi : 865235482"<<endl;                
+            {            	
+                cout<<"Kode Transaksi      : 865235482"<<endl;                
             }
-            void addTransaksi(){
-            	kasir.addKaryawan(); 
-				film.addFilm();	 
-				studio.addStudio();
-				
-            	Jadwal::addJadwal();
+            void addTransaksi(){    
+            
+            	do{
+					Jadwal::addJadwal();
+				}while((Jadwal::getKodeJadwal()!="1A")&&(Jadwal::getKodeJadwal()!="1B")); 
+							
             	cout<<"Input Jumlah Pesan Kursi : ";                
-                cin>>jmlPesanKursi;
+                cin>>jmlPesanKursi;                
 			}
             void showTransaksi()
-            {       	
-				cout<<"Kode Transaksi : 865235482"<<endl;			
-				film.showFilm();  
-				studio.showStudio();				   	
-            	Jadwal::showJadwal();
-            	cout<<"Jumlah pesan kursi : "<<jmlPesanKursi<<endl;
+            {       																   	
+            	Jadwal::showJadwal();            	
+            	cout<<"Jumlah pesan kursi  : "<<jmlPesanKursi<<endl;
             	totalHarga = jmlPesanKursi*Jadwal::getHarga();
-				cout<<"Total harga : "<<totalHarga<<endl;    
-				kasir.showKaryawan();        	            	            	            	            	          
+				cout<<"Total harga         : "<<totalHarga<<endl;    				       	            	            	            	            	          
             }
 };

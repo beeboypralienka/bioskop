@@ -13,7 +13,7 @@ class Karyawan
                 getline(cin, namaKaryawan);                                
             }
             void showKaryawan()
-            {            	
-                cout << "Kasir : "<< namaKaryawan<<endl;                                
+            {    				          					
+				cout<<"Kasir               : "<<namaKaryawan;
             }
 };

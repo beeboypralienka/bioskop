@@ -8,12 +8,22 @@ class Film
             
         public:
             void addFilm()
-            {
-                cout<<"Input Nama Film : ";
-                getline(cin, namaFilm);                               
+            {            	
+                cout<<"Input Kode Film [A/B] : ";
+                getline(cin, namaFilm);          
             }
+            
+            string getFilm(){
+            	return namaFilm;
+			}
+			
             void showFilm()
-            {
-            	cout<<"Nama Film : " << namaFilm <<endl;            
+            {            	
+            	if(namaFilm == "A"){   					         		
+            		cout<<"Film yang dipilih   : Batman" <<endl;            	
+				}else{
+					cout<<"Film yang dipilih   : Robin" <<endl;            	
+				}
+            	
             }
 };

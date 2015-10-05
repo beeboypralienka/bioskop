@@ -9,11 +9,21 @@ class Studio
         public:
             void addStudio()
             {
-                cout<<"Input Nama Studio : ";
+                cout<<"Input Kode Studio [1/2] : ";
                 getline(cin, namaStudio);                               
             }
+            
+            string getStudio(){
+            	return namaStudio;
+			}
+			
             void showStudio()
-            {
-            	cout<<"Nama Studio : " << namaStudio <<endl;            
+            {            	            					
+				if(namaStudio == "1"){            		
+            		cout<<"Studio yang dipilih : Studio Alexa" <<endl;            	
+				}else{
+					cout<<"Studio yang dipilih : Studio Delux" <<endl;            	
+				}
+            	         
             }
 };
