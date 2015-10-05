@@ -4,7 +4,7 @@ using namespace std;
 class Jadwal
 {
         private:
-            string tglMain, jamMain, kodeJadwal;
+            string tglPutar, jamTayang, kodeJadwal;
 			double hargaTiket;
             
         public:
@@ -21,17 +21,17 @@ class Jadwal
             void showJadwal()
             {            
 				if(kodeJadwal=="1A"){
-					tglMain = "12/10/2015";
-					jamMain = "13.00 WIB";
+					tglPutar = "12 Oktober 2015";
+					jamTayang = "13.00 - 15.00 WIB";
 					hargaTiket = 25000;
 				}else{
-					tglMain = "13/10/2015";
-					jamMain = "20.00 WIB";
+					tglPutar = "13 Oktober 2015";
+					jamTayang = "20.00 - 22.00 WIB";
 					hargaTiket = 30000;
 				} 	
 								 
-            	cout<<"Tanggal Putar       : " << tglMain <<endl;            
-            	cout<<"Jam Tayang          : " << jamMain <<endl;
+            	cout<<"Tanggal Putar       : " << tglPutar <<endl;            
+            	cout<<"Jam Tayang          : " << jamTayang <<endl;
             	cout<<"Harga Tiket         : " << hargaTiket <<endl;
             }
             
