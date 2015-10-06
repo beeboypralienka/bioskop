@@ -1,20 +1,13 @@
 #include <iostream>
-#include "Jadwal.cpp"
+#include "Transaksi.h"
 
 using namespace std;
- 
-class Transaksi : public Jadwal
-{		
-        private:
-            string kdTransaksi;
-            double jmlPesanKursi, totalHarga;
-            
-        public:        	
-            void generateKode()
+  	
+            void Transaksi::generateKode()
             {            	
                 cout<<"Kode Transaksi      : 865235482"<<endl;                
             }
-            void addTransaksi(){    
+            void Transaksi::addTransaksi(){    
             
             	do{
 					Jadwal::addJadwal();
@@ -23,11 +16,11 @@ class Transaksi : public Jadwal
             	cout<<"Input Jumlah Pesan Kursi : ";                
                 cin>>jmlPesanKursi;                
 			}
-            void showTransaksi()
+            void Transaksi::showTransaksi()
             {       																   	
             	Jadwal::showJadwal();            	
             	cout<<"Jumlah pesan kursi  : "<<jmlPesanKursi<<endl;
             	totalHarga = jmlPesanKursi*Jadwal::getHarga();
 				cout<<"Total harga         : "<<totalHarga<<endl;    				       	            	            	            	            	          
             }
-};
+

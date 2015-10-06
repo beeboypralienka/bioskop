@@ -1,25 +1,19 @@
-# include <iostream>
+#include <iostream>
+#include "Jadwal.h"
+
 using namespace std;
- 
-class Jadwal
-{
-        private:
-            string tglPutar, jamTayang, kodeJadwal;
-			double hargaTiket;
-            
-        public:
-            void addJadwal()
-            {            	
-            	cout<<"Input Kode Jadwal [1A/1B] : ";
-            	cin>>kodeJadwal;   								
-            }
-            
-            string getKodeJadwal(){
+
+    void Jadwal::addJadwal(){
+    	cout<<"Input Kode Jadwal [1A/1B] : ";
+        cin>>kodeJadwal;
+	}
+	
+	string Jadwal::getKodeJadwal(){
             	return kodeJadwal;
-			}
+	}
 			
-            void showJadwal()
-            {            
+    void Jadwal::showJadwal()
+    {            
 				if(kodeJadwal=="1A"){
 					tglPutar = "12 Oktober 2015";
 					jamTayang = "13.00 - 15.00 WIB";
@@ -33,10 +27,10 @@ class Jadwal
             	cout<<"Tanggal Putar       : " << tglPutar <<endl;            
             	cout<<"Jam Tayang          : " << jamTayang <<endl;
             	cout<<"Harga Tiket         : " << hargaTiket <<endl;
-            }
+    }
             
-            double getHarga()
+            double Jadwal::getHarga()
 			{
             	return hargaTiket;	
 			}
-};
+        	
