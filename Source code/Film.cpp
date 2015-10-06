@@ -1,23 +1,18 @@
 # include <iostream>
+# include "Film.h"
 using namespace std;
- 
-class Film
-{
-        private:
-            string namaFilm;
-            
-        public:
-            void addFilm()
+                     
+            void Film::addFilm()
             {            	
-                cout<<"Input Kode Film [A/B] : ";
+                cout<<"Input Kode Film [A/B]     : ";                
                 getline(cin, namaFilm);          
             }
             
-            string getFilm(){
+            string Film::getFilm(){
             	return namaFilm;
 			}
 			
-            void showFilm()
+            void Film::showFilm()
             {            	
             	if(namaFilm == "A"){   					         		
             		cout<<"Film yang dipilih   : Batman" <<endl;            	
@@ -26,4 +21,3 @@ class Film
 				}
             	
             }
-};

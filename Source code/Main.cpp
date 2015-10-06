@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Transaksi.h"
-#include "Film.cpp"
-#include "Studio.cpp"
-#include "Karyawan.cpp"
+#include "Film.h"
+#include "Studio.h"
+#include "Karyawan.h"
 
 void menu(){
 	cout<< "____________________" <<endl;	

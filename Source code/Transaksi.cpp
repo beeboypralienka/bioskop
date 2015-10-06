@@ -13,7 +13,7 @@ using namespace std;
 					Jadwal::addJadwal();
 				}while((Jadwal::getKodeJadwal()!="1A")&&(Jadwal::getKodeJadwal()!="1B")); 
 							
-            	cout<<"Input Jumlah Pesan Kursi : ";                
+            	cout<<"Input Jumlah Pesan Kursi  : ";        				
                 cin>>jmlPesanKursi;                
 			}
             void Transaksi::showTransaksi()

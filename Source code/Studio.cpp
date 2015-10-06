@@ -1,23 +1,19 @@
 # include <iostream>
+# include "Studio.h"
+
 using namespace std;
  
-class Studio
-{
-        private:
-            string namaStudio;
-            
-        public:
-            void addStudio()
+            void Studio::addStudio()
             {
-                cout<<"Input Kode Studio [1/2] : ";
+                cout<<"Input Kode Studio [1/2]   : ";                
                 getline(cin, namaStudio);                               
             }
             
-            string getStudio(){
+            string Studio::getStudio(){
             	return namaStudio;
 			}
 			
-            void showStudio()
+            void Studio::showStudio()
             {            	            					
 				if(namaStudio == "1"){            		
             		cout<<"Studio yang dipilih : Studio Alexa" <<endl;            	
@@ -26,4 +22,3 @@ class Studio
 				}
             	         
             }
-};

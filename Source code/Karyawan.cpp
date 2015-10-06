@@ -1,19 +1,13 @@
 #include <iostream>
+#include "Karyawan.h"
 using namespace std;
  
-class Karyawan
-{
-        private:
-            string namaKaryawan;
-            
-        public:
-            void addKaryawan()
+            void Karyawan::addKaryawan()
             {                
-                cout << "Input Nama Karyawan : ";
+                cout <<"Input Nama Karyawan       : ";				
                 getline(cin, namaKaryawan);                                
             }
-            void showKaryawan()
+            void Karyawan::showKaryawan()
             {    				          					
 				cout<<"Kasir               : "<<namaKaryawan;
             }
-};
