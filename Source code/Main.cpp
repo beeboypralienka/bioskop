@@ -51,6 +51,7 @@ int main() {
 	studio.showStudio(); 
     transaksi.showTransaksi();	    
     kasir.showKaryawan();    
-	cout<<endl<<endl<<"     ----- TERIMA KASIH -----"<<endl<<endl;    			         
+	cout<<endl<<endl<<"     ----- TERIMA KASIH -----"<<endl<<endl;    
+	system("pause");			         
 	return 0;
 }
